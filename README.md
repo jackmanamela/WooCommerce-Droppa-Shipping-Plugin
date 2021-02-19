@@ -58,7 +58,6 @@ for instructions on activating the plugin.
 2. The output at Checkout page.
 ![screenshot-2](https://user-images.githubusercontent.com/73278719/108494164-e57dc400-72af-11eb-9a4a-23d4e64eeb52.PNG)
 
-
 ## Support
 
 Should you encounter any issue with the plugin, please revert back to our support developer team mailto:itsupport@droppa.co.za
