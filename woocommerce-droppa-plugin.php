@@ -7,11 +7,11 @@
  * Version: 0.0.1
  * Author: Nathi Khanyile & Jack Manamela
  * Author URI: https://profiles.wordpress.org/droppagroup/
- * Requires at least: 5.3
- * Tested up to: 5.3
+ * Requires at least: 5.6.0
+ * Tested up to: 5.6.2
  * Requires PHP: 7.0
  * WC requires at least: 3.0
- * WC tested up to: 3.1
+ * WC tested up to: 4.8
  * Copyright: 2020 Droppa
  * License: MIT
  * License URI: https://droppa/licenses/MIT

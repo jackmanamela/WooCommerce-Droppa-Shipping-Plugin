@@ -3,8 +3,8 @@
 Contributors: https://profiles.wordpress.org/droppagroup/
 Donate link: https://droppa.co.za/woocommerce-shipping-plugin
 Tags: Shipping, Courier
-Requires at least: 5.3
-Tested up to: 5.3
+Requires at least: 5.6.0
+Tested up to: 5.6.2
 Stable tag: 1.0.0
 Requires PHP: 7.0
 License: GPLv2 or later
