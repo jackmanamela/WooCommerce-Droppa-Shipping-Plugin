@@ -35,7 +35,7 @@ function after_order_details($order)
         $_droppaPluginInstance = new  DroppaShippingMethod();
         if ($_droppaPluginInstance instanceof DroppaShippingMethod)
             if (isset($_SESSION['return_booking_object_ID'])) {
-                $response = $_droppaPluginInstance->curl_endpoint($_ENV['PROD_CONFIRM_PAYMENT_SERVEICE'] . $_SESSION['return_booking_object_ID'], '', 'POST');
+                $response = $_droppaPluginInstance->curl_endpoint($_ENV['UAT_CONFIRM_PAYMENT_SERVEICE'] . $_SESSION['return_booking_object_ID'], '', 'POST');
                 return $response;
             } else {
                 unset($_SESSION['return_booking_object_ID']);
