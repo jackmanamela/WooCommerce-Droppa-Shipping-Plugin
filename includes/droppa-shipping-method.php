@@ -204,7 +204,7 @@ class DroppaShippingMethod extends WC_Shipping_Method
 
         # POST Body
         $create_plugin_booking_service = [
-            'serviceId'         => $_ENV['UAT_RETAIL_SERVICE_ID'],
+            'serviceId'         => $_ENV['PROD_RETAIL_SERVICE_ID'],
             'pickUpPCode'       => WC()->countries->get_base_postcode(),
             'dropOffPCode'      => $_postcode,
             'fromSuburb'        => WC()->countries->get_base_city(),
@@ -227,7 +227,7 @@ class DroppaShippingMethod extends WC_Shipping_Method
         ];
 
         # UAT
-        $this->curl_response = $this->curl_endpoint($_ENV['UAT_BOOKINGS_SERVICE'], $create_plugin_booking_service, 'POST');
+        $this->curl_response = $this->curl_endpoint($_ENV['PROD_BOOKINGS_SERVICE'], $create_plugin_booking_service, 'POST');
 
         $response_status_code = wp_remote_retrieve_response_code($this->curl_response);
 
@@ -507,7 +507,7 @@ class DroppaShippingMethod extends WC_Shipping_Method
 
         if ('yes' !== $package['debug']) return false;
 
-        $endpoint = $_ENV['UAT_QUOTES_SERVICE'];
+        $endpoint = $_ENV['PROD_QUOTES_SERVICE'];
 
         $calculate_distance_for_quotes = $this->quotes_plugin_attributes($pickUpPCode, $dropOffPCode, $weight, $_fullDimensionContents);
 
@@ -577,7 +577,7 @@ class DroppaShippingMethod extends WC_Shipping_Method
                 "Content-Type"  => "application/json",
                 "Connection"    => "Keep-Alive",
                 "Accept"        => "application/json",
-                "Authorization" => "Bearer {$_ENV['UAT_RETAIL_API_KEY']}:{$_ENV['UAT_RETAIL_SERVICE_ID']}"
+                "Authorization" => "Bearer {$_ENV['PROD_RETAIL_API_KEY']}:{$_ENV['PROD_RETAIL_SERVICE_ID']}"
             ],
             'body'          => wp_json_encode($body),
             'blocking'      => true,
